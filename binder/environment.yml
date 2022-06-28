@@ -27,4 +27,4 @@ dependencies:
 - plotly
 - pip:
   - git+https://github.com/pyiron/pyiron_contrib.git@coscine
-  - https://github.com/pyiron/pyiron_experimental.git@nano_indentation
+  - git+https://github.com/pyiron/pyiron_experimental.git@nano_indentation
