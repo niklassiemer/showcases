@@ -2,8 +2,13 @@
 
 jupyter labextension install @j123npm/qgrid2@1.1.4
 
+git clone -b coscine https://github.com/pyiron/pyiron_contrib.git ${HOME}/tmp_pyiron_contrib
+mv ${HOME}/tmp_pyiron_contrib/pyiron_contrib ${HOME}
 
-export PYTHONPATH=$PYTHONPATH:${HOME}/utils
+git clone -b nano_indentation https://github.com/pyiron/pyiron_experimental.git ${HOME}/tmp_pyiron_exp
+mv ${HOME}/tmp_pyiron_exp/pyiron_experimental ${HOME}
+
+export PYTHONPATH=$PYTHONPATH:${HOME}/utils:${HOME}/pyiron_contrib:${HOME}/pyiron_experimental
 
 ls ${HOME}
 rm -r ${HOME}/binder

@@ -25,6 +25,3 @@ dependencies:
 - coscine
 - qgrid
 - plotly
-- pip:
-  - git+https://github.com/pyiron/pyiron_contrib.git@coscine
-  - git+https://github.com/pyiron/pyiron_experimental.git@nano_indentation
