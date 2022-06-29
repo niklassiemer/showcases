@@ -17,8 +17,8 @@ class CoscineOverview:
         self._download_time = None
         self.fail_hard = False
         self._hdf = FileHDFio(file_name=os.path.join(os.getcwd(), "CoScInE_Overview"))
-        # if token is not None:
-        self._init_coscine_client(token)
+        if token is not None:
+            self._init_coscine_client(token)
         if self._hdf.file_exists:
             try:
                 self.from_hdf()
@@ -89,11 +89,11 @@ class CoscineOverview:
         self._resources = json.loads(self._hdf["resources"])
 
     def _init_coscine_client(self, token):
-        if isinstance(token, str):
+        if isinstance(token, str) and token != "":
             self._client = coscine.Client(token, verbose=False)
         elif isinstance(token, coscine.Client):
             self._client = token
-        elif token is None:
+        elif token == "":
             self._client = coscine.Client(TOKEN, verbose=False)
         else:
             raise TypeError(f"Expected str or coscine.Client but got {type(token)}")
