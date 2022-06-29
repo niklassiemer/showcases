@@ -11,4 +11,4 @@ mv ${HOME}/tmp_pyiron_exp/pyiron_experimental ${HOME}
 export PYTHONPATH=$PYTHONPATH:${HOME}/utils:${HOME}/pyiron_contrib:${HOME}/pyiron_experimental
 
 ls ${HOME}
-rm -r ${HOME}/binder
+rm -r ${HOME}/binder ${HOME}/tmp_*
